@@ -39,6 +39,8 @@ body {
   background-color: #14253d;
   border-radius: 10px;
   padding: 20px;
+  -webkit-box-shadow: -4px 6px 20px #030d21;
+          box-shadow: -4px 6px 20px #030d21;
 }
 
 .container .image-showcase {
@@ -85,6 +87,12 @@ body {
 
 .container .image-showcase .view-overlay:hover {
   opacity: 1;
+}
+
+@media only screen and (max-height: 595px) {
+  .container .image-showcase {
+    height: 180px;
+  }
 }
 
 .container .text .name {
@@ -206,5 +214,14 @@ body {
 
 .container .text .profile span.highlight {
   color: white;
+}
+
+@media only screen and (max-width: 365px) {
+  .container {
+    max-width: 96%;
+    padding: 12px;
+    -webkit-box-shadow: 0;
+            box-shadow: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */

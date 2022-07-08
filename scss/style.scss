@@ -1,0 +1,114 @@
+@import './config';
+
+body {
+    @include flex();
+    height: 100vh;
+    overflow: hidden;
+    background-color: $very-dark-blue-main;
+}
+
+.container {
+    max-width: 350px;
+    margin: 0 auto;
+    background-color: $very-dark-blue-card;
+    border-radius: 10px;
+    padding: 20px;
+
+    .image-showcase {
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        height: 300px;
+        width: 100%;
+        cursor: pointer;
+        
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .view-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            @include flex();
+            background-color: rgba(0, 255, 255, 0.431);
+            opacity: 0;
+            transition: all 0.5s ease;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    .text {
+        .name {
+            color: $white;
+            font-size: 25px;
+            margin: 20px 0;
+        }        
+
+        .description {
+            font-size: 16px;
+            line-height: 1.4;
+            color: $soft-blue;
+        }
+
+        // details
+        .details {
+            margin: 20px 0;
+            @include flex($justify:space-between);
+
+            svg {
+                margin-right: 5px;
+            }
+            
+            .coin {
+                font-size: 15px;
+                font-weight: bold;
+                color: $cyan;
+                @include flex();
+            }
+            
+            .time {
+                font-size: 15px;
+                color: $soft-blue;
+                @include flex();
+            }
+        }
+
+        // profile
+        .profile {
+            border-top: 1px solid $very-dark-blue-line;
+            padding-top: 10px;
+            @include flex($justify:flex-start);
+
+            .image {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                overflow: hidden;
+                padding: 2px;
+                background-color: $soft-blue;
+                margin-right: 20px;
+
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            span {
+                font-size: 15px;
+                color: $soft-blue;
+
+                &.highlight {
+                    color: $white;
+                }
+            }
+        }
+    }
+}

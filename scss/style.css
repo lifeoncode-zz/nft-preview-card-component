@@ -214,6 +214,13 @@ body {
 
 .container .text .profile span.highlight {
   color: white;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.container .text .profile span.highlight:hover {
+  color: #00fff7;
 }
 
 @media only screen and (max-width: 365px) {

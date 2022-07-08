@@ -112,6 +112,12 @@ body {
 
                 &.highlight {
                     color: $white;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        color: $cyan;
+                    }
                 }
             }
         }
